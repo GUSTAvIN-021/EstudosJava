@@ -26,7 +26,7 @@ public class App {
 //---------------------------------------------------------------
 
 
-        int numero = 10; // Exemplo de número inteiro positivo
+/*        int numero = 10; // Exemplo de número inteiro positivo
         int soma = 0;
 
          // Calcula a soma dos números inteiros positivos
@@ -38,6 +38,26 @@ public class App {
          // Exibe o resultado da soma
          System.out.println("A soma dos números inteiros positivos é: " +
         soma);
+*/
+
+    int codigoDeSaida = 9;
+
+        for (int codigoCarteirinha= 1; codigoCarteirinha <= 10; codigoCarteirinha++) {
+
+            if (codigoCarteirinha == codigoDeSaida) {
+                System.out.println("Código de saída encontrado: " + codigoDeSaida);
+                break; // Sai do loop quando o código de saída é encontrado
+            }
+
+            System.out.println("Código da carteirinha: " + codigoCarteirinha);
+
+            if (codigoCarteirinha == 3 || codigoCarteirinha == 7 || codigoCarteirinha == 10) {
+                System.out.println("O codigo da carteirinha " + codigoCarteirinha + " é aceito pelo hospital Santa Clara");
+                continue; // Pula para a próxima iteração do loop
+            }
+
+            System.out.println("O código da carteirinha " + codigoCarteirinha + " não é aceito pelo hospital Santa Clara");
+        }
 
     }
 }
